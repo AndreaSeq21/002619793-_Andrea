@@ -1,0 +1,101 @@
+h1 {
+    text-align: center;
+    color: rgb(240, 236, 236);
+    border-style: solid;
+    background-color: black;
+}
+
+body {
+    background-image: url("/images/seaBackground.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div.gallery {
+    margin: 90px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 300px;
+}
+
+div.gallery:hover {
+    border: 1px solid rgb(148, 62, 8);
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 10px;
+    text-align: center;
+    text-decoration: solid;
+    color: aqua;
+    background-color: black;
+}
+
+p {
+    border-style: solid;
+    border-color: azure;
+    color: bisque;
+    background-color: rgb(108, 81, 81);
+    font-size: larger;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: rgb(240, 236, 236);
+    border-style: solid;
+    background-color: black;
+}
+
+table {
+    border: 1px solid;
+    background-color: black;
+    border-color: azure;
+    width: 700px;
+    align-content: center;
+}
+
+th {
+    text-decoration: solid;
+    color: azure;
+    border: 1px solid;
+}
+
+.signup-table {
+    color: rgb(11, 19, 26);
+    border: 5px solid;
+    padding: 30px;
+    width: 300px;
+    margin: 0 auto;
+    background-color: rgb(119, 102, 102);
+}
+
+.signup-table button {
+    height: 32px;
+    color: rgb(10, 7, 7);
+    background: aliceblue;
+    border-radius: 5px;
+    font-size: 21px;
+    margin: 100px;
+}
+
+.signup-table label {
+    font-size: large;
+    font-weight: bold;
+    padding: 10px;
+    color: aliceblue;
+}
+
+.table-signup-design {
+    padding: 10px;
+    width: 100px;
+}
+
+.tr-signup-design {
+    text-align: center;
+    padding: 15px;
+}
