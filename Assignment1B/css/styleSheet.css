@@ -3,7 +3,7 @@
   margin: auto;
 }
 body {
-  background-image: url("images/italyBackground.jpg");
+  background-image: url("/images/italyBackground.jpg");
   background-size: cover;
 }
 h1 {
