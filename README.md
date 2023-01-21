@@ -8,7 +8,7 @@ This is a website for providing about tourism in Italy.
 
  
  ## Style
- - The web pages are styled by an external css file - cssStyle.css
+ - The web pages are styled by an external css file 
 
 ## Tags
  - html: This tag represents the root of an HTML document and is the container for all other HTML elements 
