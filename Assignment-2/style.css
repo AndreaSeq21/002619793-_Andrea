@@ -4,18 +4,15 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-
 body {
     background-color: #7286D3;
     background-size: cover;
 }
-
 /* ---------------home-------------- */
 #name-logo {
     color: azure;
     font-size: 40px;
 }
-
 .container-header {
     width: 100%;
     top: 1px;
@@ -23,7 +20,6 @@ body {
     position: fixed;
     background-color: rgb(8, 37, 71);
 }
-
 .profilePic img {
     width: 310px;
     height: 550px;
@@ -32,34 +28,26 @@ body {
     margin-top: 100px;
     box-shadow: 20px 20px 50px 15px rgb(145, 126, 126);
 }
-
-
-
 p {
     text-align: left;
 }
-
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-
 }
-
 nav ul li {
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
 }
-
 nav ul li a {
     color: azure;
     text-decoration: none;
     font-size: 18px;
     position: relative;
 }
-
 nav ul li a::after {
     content: '';
     width: 0;
@@ -69,13 +57,10 @@ nav ul li a::after {
     left: 0;
     bottom: -6px;
     transition: 0.5s;
-
 }
-
 nav ul li a:hover::after {
     width: 100%;
 }
-
 .header-text {
     margin-top: 6%;
     margin-left: 100px;
@@ -87,7 +72,6 @@ nav ul li a:hover::after {
     padding: 10px 10px;
     overflow: visible;
 }
-
 .header-text h1 {
     font-size: 60px;
 }
@@ -152,6 +136,7 @@ nav ul li a:hover::after {
 .gallery1 .box:hover {
     border: 1px solid #f1f5f3;
     background-color: #f1f5f3;
+    opacity: 0.6;
 }
 
 .gallery2 .box:hover {
