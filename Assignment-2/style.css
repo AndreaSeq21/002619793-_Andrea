@@ -458,7 +458,7 @@ footer {
     .contact .contact-row {
 
         width: 230%;
-        margin-left: 250px;
+        margin-left: 190px;
 
     }
 
@@ -466,6 +466,14 @@ footer {
 
         margin-left: 100px;
 
+    }
+
+    /* ------------------Experience-------------- */
+
+    .experience-row {
+        display: table;
+        margin-left: 50px;
+        width: 100%;
     }
 
 
