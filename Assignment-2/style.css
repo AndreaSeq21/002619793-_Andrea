@@ -28,7 +28,6 @@ body {
     width: 310px;
     height: 550px;
     float: right;
-    /* border-radius: 50%; */
     margin-right: 150px;
     margin-top: 100px;
     box-shadow: 20px 20px 50px 15px rgb(145, 126, 126);
@@ -79,29 +78,19 @@ nav ul li a:hover::after {
 
 .header-text {
     margin-top: 6%;
-    /* font-size: 30px; */
     margin-left: 100px;
     width: 50%;
-    /* height: 110px; */
-    /* border-style: solid; */
     text-align: justify;
     text-justify: auto;
     border: #EBEBEB;
     border-style: solid;
     padding: 10px 10px;
+    overflow: visible;
 }
 
 .header-text h1 {
     font-size: 60px;
-    /* margin-top: 20px; */
 }
-
-/* #formalPicture {
-    width: 450px;
-    height: 600px;
-    margin-top: 20px;
-} */
-
 
 .sub-titles {
     font-size: 60px;
@@ -154,9 +143,6 @@ nav ul li a:hover::after {
     color: black;
 }
 
-
-
-/* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
@@ -166,15 +152,12 @@ nav ul li a:hover::after {
 .gallery1 .box:hover {
     border: 1px solid #f1f5f3;
     background-color: #f1f5f3;
-    opacity: 0.6;
-    /* box-shadow: #191313; */
 }
 
 .gallery2 .box:hover {
     border: 1px solid #f1f5f3;
     background-color: #f1f5f3;
     opacity: 0.6;
-    /* box-shadow: #191313; */
 }
 
 /* ----------------------------Experience---------------------------- */
@@ -195,7 +178,6 @@ nav ul li a:hover::after {
 }
 
 .experience-column {
-    /* float: left; */
     width: 50%;
     padding: 10px;
     display: table-cell;
@@ -208,7 +190,6 @@ nav ul li a:hover::after {
 }
 
 .experience-row ul li {
-    /* list-style: none; */
     font-size: 15px;
     margin-left: 20px;
 }
@@ -233,12 +214,9 @@ nav ul li a:hover::after {
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    /* padding-bottom: 10px; */
     width: 50%;
     margin-left: 25%;
-    /* border-style: solid; */
     padding-bottom: 90px;
-    /* padding-right: 10px; */
 }
 
 .contact-head {
@@ -325,16 +303,13 @@ nav ul li a:hover::after {
 }
 
 .education-row {
-    /* display: table; */
     width: 100%;
     text-align: center;
 }
 
 .education-column {
-    /* float: left; */
     width: 100%;
     padding: 10px;
-    /* display: table-cell; */
 }
 
 
@@ -355,7 +330,6 @@ footer {
 /* -------------------Make web page response-------------------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     .container-header {
-        /* width: 100%; */
         height: 5%;
         position: fixed;
     }
@@ -386,7 +360,6 @@ footer {
     .profilePic img {
         width: 300px;
         height: 450px;
-        /* border-radius: 50%; */
         margin-right: 90px;
     }
 
@@ -427,7 +400,6 @@ footer {
 
 @media only screen and (min-device-width:350px) and (max-device-width:768px) {
     .container-header {
-        /* width: 100%; */
         height: 5%;
         position: fixed;
     }
@@ -435,15 +407,18 @@ footer {
     #name-logo {
         display: none;
     }
+
     nav ul li a {
         font-size: 8px;
         margin-right: 15px;
     }
+
     .header-text {
         margin-top: 10%;
         margin-left: 25px;
         width: 90%;
     }
+
     .profilePic img {
         width: 200px;
         height: 450px;
@@ -451,7 +426,7 @@ footer {
         margin-right: -200px;
         margin-top: 100px;
     }
-    
+
     /* -----------------education--------------- */
     .education-column {
         width: 90%;
@@ -475,12 +450,13 @@ footer {
     .share {
         display: none;
     }
-   
-    
+
+
 
     .post {
         display: none;
     }
+
     footer {
         display: none;
     }
@@ -490,30 +466,31 @@ footer {
         margin: 1rem 0;
         height: 1rem;
         width: 19%;
-    
+
 
     }
-    .contact .contact-row  {
-  
+
+    .contact .contact-row {
+
         width: 230%;
         margin-left: 250px;
-    
+
     }
 
     .btn {
- 
+
         margin-left: 100px;
- 
+
     }
 
 
 
 }
-    @media only screen and (min-device-width:1024px) and (max-device-width:1120px) {
-        .profilePic img {
-            display: none;
 
-        }
-        
+@media only screen and (min-device-width:1024px) and (max-device-width:1120px) {
+    .profilePic img {
+        display: none;
+
     }
 
+}
