@@ -31,7 +31,7 @@ This is a website for displaying my professional portfolio details which will sh
  - header: This element represents a container for introductory content or a set of navigational links.
  - footer: This tag defines a footer for a document or section.
  - section: The section tag defines the section of documents such as chapters, headers, footers, or any other sections. The section tag divides the content into sections and subsections.
- - figcaption: The figcaption>tag defines a caption for a figure element.
+ - figcaption: The figcaption tag defines a caption for a figure element.
  - nav: The nav tag defines a set of navigation links.
  - ul,li: The ul tag defines an unordered (bulleted) list. The li tag defines a list item.
 
