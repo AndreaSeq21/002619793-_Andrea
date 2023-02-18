@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+   
+<link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8b16a57fbd.js" crossorigin="anonymous"></script>
+
+    <title>Travellers</title>
+
+    <script>
+        
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+  
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1c2331;" >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="images/favicon.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
+          Explore Globe
+        </a>
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="viewBlogs.html">View Blogs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Explore Places
+              </a>
+              <ul class="dropdown-menu active" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#"> Add Experience </a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <!-- <img src="images/img4.jpg" class="d-block w-100" alt="..."> -->
+          <div class="wrapper bg-white" id ="mainDivForm">
+            <form action="#" id="mainForm">
+                <div class="form-group border-bottom d-flex align-items-center justify-content-between flex-wrap">
+                    <label class="option my-sm-0 my-2">
+                        <input type="radio" name="radio" checked>Round Trip
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="option my-sm-0 my-2">
+                        <input type="radio" name="radio">One Way
+                        <span class="checkmark"></span>
+                    </label>
+                    <div class="d-flex align-items-center my-sm-0 my-2">
+                        <a href="#" class="text-decoration-none">
+                            Multi-city/Stopovers <span class="fas fa-angle-right ps-2 text-primary"></span>
+                        </a>
+                    </div>
+                </div>
+                <div class="form-group d-sm-flex margin">
+                    <div class="d-flex align-items-center flex-fill me-sm-1 my-sm-0 my-4 border-bottom position-relative">
+                        <input type="text" required placeholder="From" class="form-control">
+                        <div class="label" id="from"></div>
+                        <span class="fas fa-dot-circle text-muted"></span>
+                    </div>
+                    <div class="d-flex align-items-center flex-fill ms-sm-1 my-sm-0 my-4 border-bottom position-relative">
+                        <input type="text" required placeholder="To" class="form-control">
+                        <div class="label" id="to"></div>
+                        <span class="fas fa-map-marker text-muted"></span>
+                    </div>
+                </div>
+                <div class="form-group d-sm-flex margin">
+                    <div class="d-flex align-items-center flex-fill me-sm1 my-sm-0 border-bottom position-relative">
+                        <input type="date" required placeholder="Depart Date" class="form-control">
+                        <div class="label" id="depart"></div>
+                    </div>
+                    <div class="d-flex align-items-center flex-fill ms-sm-1 my-sm-0 my-4 border-bottom position-relative">
+                        <input type="date" required placeholder="Return Date" class="form-control">
+                        <div class="label" id="return"></div>
+                    </div>
+                </div>
+                <div class="form-group border-bottom d-flex align-items-center position-relative">
+                    <input type="text" required placeholder="Traveller(s)" class="form-control">
+                    <div class="label" id="psngr"></div>
+                    <span class="fas fa-users text-muted"></span>
+                </div>
+                <div class="form-group my-3">
+                    <div class="btn btn-primary rounded-0 d-flex justify-content-center text-center p-3">Search Flights
+                    </div>
+                </div>
+            </form>
+            
+    
+        </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/img5.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images/img6.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Cards -->
+    <!-- <div id="section01" class="container" style="padding-top: 170px"></div> -->
+
+   <div class="cardholder">
+      <section class="mx-auto my-5" style="max-width: 23rem;">
+        <div class="card">
+          <div class="card-body d-flex flex-row">
+            <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle me-3" height="50px"
+              width="50px" alt="avatar" />
+            <div>
+              <h5 class="card-title font-weight-bold mb-2">John Doe</h5>
+              <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+              <p class="card-text"><i class="far fa-clock pe-2"></i>07/24/2018</p>
+            </div>
+          </div>
+          <div class="bg-image hover-overlay ripple rounded-0" data-mdb-ripple-color="light">
+            <img class="img-fluid" src="./images/blog1.jpeg" width="400px" height="300px
+              alt="Card image cap " />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <p class="card-text collapse" id="collapseContent">
+              Recently, we added several exotic new dishes to our restaurant menu. They come from
+              countries such as Mexico, Argentina, and Spain. Come to us, have some wine and enjoy
+              our juicy meals from around the world.
+            </p>
+            <div class="d-flex justify-content-between">
+              <a class="btn btn-link link-danger p-md-1 my-1" data-mdb-toggle="collapse" href="#collapseContent"
+                role="button" aria-expanded="false" aria-controls="collapseContent">Read more</a>
+              <div>
+                <i class="fas fa-share-alt text-muted p-md-1 my-1 me-2" data-mdb-toggle="tooltip"
+                  data-mdb-placement="top" title="Share this post"></i>
+                <i class="fas fa-heart text-muted p-md-1 my-1 me-0" data-mdb-toggle="tooltip" data-mdb-placement="top"
+                  title="I like it"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+
+      <section class="mx-auto my-5" style="max-width: 23rem;">
+    
+        <div class="card">
+          <div class="card-body d-flex flex-row">
+            <img src="./images/profile2.jpeg" class="rounded-circle me-3" height="50px"
+              width="50px" alt="avatar" />
+            <div>
+              <h5 class="card-title font-weight-bold mb-2">Andrea Bert</h5>
+              <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+              <p class="card-text"><i class="far fa-clock pe-2"></i>07/24/2018</p>
+            </div>
+          </div>
+          <div class="bg-image hover-overlay ripple rounded-0" data-mdb-ripple-color="light">
+            <img class="img-fluid" src="./images/blog2.jpeg" width="400px" height="300px
+              alt="Card image cap" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <p class="card-text collapse" id="collapseContent">
+              Recently, we added several exotic new dishes to our restaurant menu. They come from
+              countries such as Mexico, Argentina, and Spain. Come to us, have some wine and enjoy
+              our juicy meals from around the world.
+            </p>
+            <div class="d-flex justify-content-between">
+              <a class="btn btn-link link-danger p-md-1 my-1" data-mdb-toggle="collapse" href="#collapseContent"
+                role="button" aria-expanded="false" aria-controls="collapseContent">Read more</a>
+              <div>
+                <i class="fas fa-share-alt text-muted p-md-1 my-1 me-2" data-mdb-toggle="tooltip"
+                  data-mdb-placement="top" title="Share this post"></i>
+                <i class="fas fa-heart text-muted p-md-1 my-1 me-0" data-mdb-toggle="tooltip" data-mdb-placement="top"
+                  title="I like it"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+      <section class="mx-auto my-5" style="max-width: 23rem;">
+        <div class="card">
+          <div class="card-body d-flex flex-row">
+            <img src="./images/profile3.jpeg" class="rounded-circle me-3" height="50px"
+              width="50px" alt="avatar" />
+            <div>
+              <h5 class="card-title font-weight-bold mb-2">Robert Watson</h5>
+              <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+              <p class="card-text"><i class="far fa-clock pe-2"></i>07/24/2018</p>
+            </div>
+          </div>
+          <div class="bg-image hover-overlay ripple rounded-0" data-mdb-ripple-color="light">
+            <img class="img-fluid" src="./images/blog3.jpeg" width="400px" height="200px"
+              alt="Card image cap" />
+            <a href="#!">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+            </a>
+          </div>
+          <div class="card-body">
+            <p class="card-text collapse" id="collapseContent">
+              Recently, we added several exotic new dishes to our restaurant menu. They come from
+              countries such as Mexico, Argentina, and Spain. Come to us, have some wine and enjoy
+              our juicy meals from around the world.
+            </p>
+            <div class="d-flex justify-content-between">
+              <a class="btn btn-link link-danger p-md-1 my-1" data-mdb-toggle="collapse" href="#collapseContent"
+                role="button" aria-expanded="false" aria-controls="collapseContent">Read more</a>
+              <div>
+                <i class="fas fa-share-alt text-muted p-md-1 my-1 me-2" data-mdb-toggle="tooltip"
+                  data-mdb-placement="top" title="Share this post"></i>
+                <i class="fas fa-heart text-muted p-md-1 my-1 me-0" data-mdb-toggle="tooltip" data-mdb-placement="top"
+                  title="I like it"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <p><span class="glyphicon glyphicon-chevron-right"></span></p>
+    </section>
+
+
+  </section>
+  <section class="mx-auto my-5" style="max-width: 23rem;">
+    <div class="card">
+      <div class="card-body d-flex flex-row">
+        <img src="./images/profile4.png" class="rounded-circle me-3" height="50px"
+          width="50px" alt="avatar" />
+        <div>
+          <h5 class="card-title font-weight-bold mb-2">Patrick Parikh</h5>
+          <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+          <p class="card-text"><i class="far fa-clock pe-2"></i>07/24/2018</p>
+        </div>
+      </div>
+      <div class="bg-image hover-overlay ripple rounded-0" data-mdb-ripple-color="light">
+        <img class="img-fluid" src="./images/blog4.jpeg" width="400px" height="200px
+          alt="Card image cap" />
+        <a href="#!">
+          <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+        </a>
+      </div>
+      <div class="card-body">
+        <p class="card-text collapse" id="collapseContent">
+          Recently, we added several exotic new dishes to our restaurant menu. They come from
+          countries such as Mexico, Argentina, and Spain. Come to us, have some wine and enjoy
+          our juicy meals from around the world.
+        </p>
+        <div class="d-flex justify-content-between">
+          <a class="btn btn-link link-danger p-md-1 my-1" data-mdb-toggle="collapse" href="#collapseContent"
+            role="button" aria-expanded="false" aria-controls="collapseContent">Read more</a>
+          <div>
+            <i class="fas fa-share-alt text-muted p-md-1 my-1 me-2" data-mdb-toggle="tooltip"
+              data-mdb-placement="top" title="Share this post"></i>
+            <i class="fas fa-heart text-muted p-md-1 my-1 me-0" data-mdb-toggle="tooltip" data-mdb-placement="top"
+              title="I like it"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <p><span class="glyphicon glyphicon-chevron-right"></span></p>
+
+  
+</section>
+
+
+
+  </div>
+    </div>
+
+    <!-- Table -->
+   <!--Google map-->
+   <h1>Explore more with maps</h1>
+<div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+  <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+    style="border:0" allowfullscreen></iframe>
+</div>
+    <!-- FOrm -->
+    <div id="section03" class="container" >
+      <section class="vh-100" >
+      
+        <div class="container h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-9">
+      
+              <h1 >Write a Review</h1>
+      
+              <div class="card1" style="border-radius: 15px;">
+                <div class="card-body">
+      
+                  <div class="row align-items-center pt-4 pb-3">
+                    <div class="col-md-3 ps-5">
+      
+                      <h6 class="mb-0">Full name</h6>
+      
+                    </div>
+                    <div class="col-md-9 pe-5">
+      
+                      <input type="text" class="form-control form-control-lg" />
+      
+                    </div>
+                  </div>
+      
+                  <hr class="mx-n3">
+      
+                  <div class="row align-items-center py-3">
+                    <div class="col-md-3 ps-5">
+      
+                      <h6 class="mb-0">Email address</h6>
+      
+                    </div>
+                    <div class="col-md-9 pe-5">
+      
+                      <input type="email" class="form-control form-control-lg" placeholder="example@example.com" />
+      
+                    </div>
+                  </div>
+      
+                  <hr class="mx-n3">
+      
+                  <div class="row align-items-center py-3">
+                    <div class="col-md-3 ps-5">
+      
+                      <h6 class="mb-0">Comments</h6>
+      
+                    </div>
+                    <div class="col-md-9 pe-5">
+      
+                      <textarea class="form-control" rows="3" placeholder="Message sent to the employer"></textarea>
+      
+                    </div>
+                  </div>
+      
+                  <hr class="mx-n3">
+      
+                  <div class="row align-items-center py-3">
+                    <div class="col-md-3 ps-5">
+      
+                      <h6 class="mb-0">Upload Pictures</h6>
+      
+                    </div>
+                    <div class="col-md-9 pe-5">
+      
+                      <input class="form-control form-control-lg" id="formFileLg" type="file" />
+                      <div class="small text-muted mt-2">Upload your pictures or any other relevant file. Max file
+                        size 50 MB</div>
+      
+                    </div>
+                  </div>
+      
+                  <hr class="mx-n3">
+      
+                  <div class="px-5 py-4" >
+                    <button type="submit" class="btn btn-primary btn-lg" style="margin-left: 100px;">Send Review</button>
+                  </div>
+      
+                </div>
+              </div>
+      
+            </div>
+          </div>
+
+          
+        </div>
+        
+      </section>
+      
+  
+    </div>
+    
+
+    <!-- Progress Bar -->
+    <div id="section04" class="container" style="padding-top: 170px">
+    
+    
+      
+
+     
+      </div>
+
+    <!-- Form -->
+  
+   
+    
+
+    <!-- Footer -->
+    <!-- <div class="container my-5"> -->
+      <div>
+
+      <!-- Footer -->
+      <footer
+              class="text-center text-lg-start text-white"
+              style="background-color: #1c2331"
+              >
+        <!-- Section: Social media -->
+        <section
+                 class="d-flex justify-content-between p-4"
+                 style="background-color: #6351ce"
+                 >
+          <!-- Left -->
+          <div class="me-5">
+            <span>Get connected with us on social networks:</span>
+          </div>
+          <!-- Left -->
+    
+          <!-- Right -->
+          <div>
+            <a href="" class="text-white me-4">
+              <i class="fab fa-facebook-f"></i>
+              <!-- <i class="fa-brands fa-facebook"></i> -->
+            </a>
+            <a href="" class="text-white me-4">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="text-white me-4">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="" class="text-white me-4">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="text-white me-4">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="text-white me-4">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <!-- Right -->
+        </section>
+        <!-- Section: Social media -->
+    
+        <!-- Section: Links  -->
+        <section class="">
+          <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+                <h6 class="text fw-bold">Explore Globe</h6>
+                <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 60px; background-color: #7c4dff; height: 2px"
+                    />
+                <p>
+                  This is a travel website which helps user to explore destinations, manage travel bookings, share customer experience by adding reviews & images.
+                </p>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold">Products</h6>
+                <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 60px; background-color: #7c4dff; height: 2px"
+                    />
+                <p>
+                  <a href="#!" class="text-white">Cafe</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">Hotels</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">Tour Packages</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">Deal of the Season</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold">Useful links</h6>
+                <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 60px; background-color: #7c4dff; height: 2px"
+                    />
+                <p>
+                  <a href="#!" class="text-white">Your Account</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">Become an Subscriber</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">Shipping Rates</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-white">Help</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold">Contact</h6>
+                <hr
+                    class="mb-4 mt-0 d-inline-block mx-auto"
+                    style="width: 60px; background-color: #7c4dff; height: 2px"
+                    />
+                <p><i class="fas fa-home mr-3"></i> Boston, MA 02215, US</p>
+                <p><i class="fas fa-envelope mr-3"></i> exploreglobe@gmail.com</p>
+                <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+              </div>
+              <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+          </div>
+        </section>
+        <!-- Section: Links  -->
+    
+        <!-- Copyright -->
+        <div
+             class="text-center p-3"
+             style="background-color: rgba(0, 0, 0, 0.2)"
+             >
+          © 2023 Copyright:
+          <a class="text-white" href="https://mdbootstrap.com/"
+             >ExploreGlobe.com</a
+            >
+        </div>
+        <!-- Copyright -->
+      </footer>
+      <!-- Footer -->
+    
+    </div>
+    <!-- End of .container -->
+
+</body>
+</html>
