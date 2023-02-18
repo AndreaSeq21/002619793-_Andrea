@@ -1,6 +1,6 @@
 # WebDesign_2023_Project
 
-#Team Members:
+Team Members:
 1. Andrea Joyce Sequeira NUID - 002619793
 2. Bhagyashri Chavan NUID - 002939515
 3. Nishi Pancholi NUID - 002620349
