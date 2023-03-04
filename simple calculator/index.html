@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Registration Form</title>
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+</head>
+
+<body>
+   <div class="container">
+      <h1>REGISTERATION FORM</h1>
+      <form id="register_form">
+         <div>
+            <input type="text" id="form_fname" name="username" required="">
+            <span class="error_form" id="fnamerrormsg"></span>
+            <label>USERNAME</label>
+         </div>
+         <div>
+            <input type="text" id="form_email" name="email" required="">
+            <span class="error_form" id="emailerrormsg"></span>
+            <label>EMAIL ID</label>
+         </div>
+         <div>
+            <input type="password" id="formpass" name="" required="">
+            <span class="error_form" id="passworderrmsg"></span>
+            <label>PASSWORD</label>
+         </div>
+         <input type="submit" id="sbmt" value="Register" name="">
+      </form>
+   </div>
+   </div>
+   <script type="text/javascript">
+      $(function () {
+         $("#fnamerrormsg").hide();
+         $("#emailerrormsg").hide();
+         $("#passworderrmsg").hide();
+
+         var err_fname = false;
+         var error_email = false;
+         var error_password = false;
+
+         $("#form_fname").focusout(function () {
+            checkName();
+         });
+         $("#form_email").focusout(function () {
+            checkEmail();
+         });
+         $("#formpass").focusout(function () {
+            checkPassword();
+         });
+
+         function checkName() {
+            var pattern = /^[a-zA-Z]*$/;
+            var firstname = $("#form_fname").val();
+            if (pattern.test(firstname) && firstname !== '') {
+               $("#fnamerrormsg").hide();
+            } else {
+               $("#fnamerrormsg").html("Only Characters and no spaces allowed");
+               $("#fnamerrormsg").show();
+               err_fname = true;
+            }
+         }
+
+         function checkEmail() {
+            var pattern = /([\w\.]+)\.([\w\.]+)@northeastern\.edu/;
+            var email = $("#form_email").val();
+            if (pattern.test(email) && email !== '') {
+               $("#emailerrormsg").hide();
+            } else {
+               $("#emailerrormsg").html("Invalid Email, Please enter full ID");
+               $("#emailerrormsg").show();
+               error_email = true;
+            }
+         }
+
+         function checkPassword(){
+            var passPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+            var pass = $("#formpass").val();
+            if(passPattern.test(pass) && pass !== ''){
+               $("#passworderrmsg").hide();
+            } else {
+               $("#passworderrmsg").html("Please enter password with minimum 7 character, 1 digit, 1 special character, and 1 letter in upper or lower case");
+               $("#passworderrmsg").show();
+               error_password = true;
+            }
+         }
+
+         $("#register_form").submit(function () {
+            err_fname = false;
+            error_email = false;
+            error_password = false;
+            checkName();
+            checkEmail();
+            checkPassword();
+            if (err_fname === false && error_email === false && error_password === false) {
+               alert("Successfull");
+
+               var firstname = $("#form_fname").val();
+               window.sessionStorage.setItem("username", firstname);
+               var url = "calc.html";
+               $(location).attr('href', url);
+               window.location.href = url;
+
+               return false;
+            }
+            else {
+               alert("Please Fill the form Correctly");
+            }
+
+         });
+      });
+
+   </script>
+</body>
+
+</html>
